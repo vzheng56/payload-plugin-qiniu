@@ -1,0 +1,47 @@
+{
+  "name": "payload-plugin-qiniu",
+  "version": "0.1.0",
+  "description": "Qiniu Cloud Storage adapter for Payload CMS",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "payload",
+    "cms",
+    "qiniu",
+    "storage",
+    "upload",
+    "plugin",
+    "cloud storage"
+  ],
+  "author": "yufu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yufu/payload-plugin-qiniu"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "clean": "rimraf dist",
+    "prepublishOnly": "pnpm run clean && pnpm run build"
+  },
+  "peerDependencies": {
+    "payload": "^2.0.0 || ^3.0.0",
+    "@payloadcms/plugin-cloud-storage": "^3.0.0"
+  },
+  "dependencies": {
+    "qiniu": "^7.14.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "rimraf": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+} 
